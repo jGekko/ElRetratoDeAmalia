@@ -6,8 +6,16 @@ using System;
 public class GazeManager : MonoBehaviour
 {
     public event Action OnGazeSelection;
-
     public static GazeManager Instance;
+
+    [SerializeField] private GameObject gazeBarCanvas;
+    [SerializeField] private Image fillIndicator;
+    [SerializeField] private float timeForSelection = 1.0f;
+    [SerializeField] private float maxGazeDistance = 10.0f;
+
+    private float timeCounter;
+    private bool runTimer;
+    private RaycastHit currentHit;
 
     private void Awake()
     {
@@ -21,62 +29,74 @@ public class GazeManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private GameObject gazeBarCanvas;
-    [SerializeField] Image fillIndicator;
-    [Tooltip("Time in seg")]
-    [SerializeField] private float timeForSelection =1.0f;
-
-    private float timeCounter;
-    private float timeProggres;
-    private bool runTimer;
     void Start()
     {
         gazeBarCanvas.SetActive(false);
-        fillIndicator.fillAmount = Normalise();
+        fillIndicator.fillAmount = 0;
     }
 
-
-    public void Update()
+    void Update()
     {
-        if (runTimer)
+        HandleRaycast();
+    }
+
+    private void HandleRaycast()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        if (Physics.Raycast(ray, out currentHit, maxGazeDistance))
         {
-            timeProggres += Time.deltaTime;
-            AddValue(timeProggres);
+            if (currentHit.collider.CompareTag("Interactable"))
+            {
+                if (!runTimer)
+                {
+                    StartGazeSelection(); // Inicia el temporizador solo si no está ya en marcha
+                }
+                else
+                {
+                    timeCounter += Time.deltaTime;
+                    UpdateGazeProgress();
+                }
+            }
+            else
+            {
+                CancelGazeSelection();
+            }
+        }
+        else
+        {
+            CancelGazeSelection(); // Si no hay colisión, cancela la selección
         }
     }
-    public void SetUpGaze(float timeForSelection) 
+
+    public void SetUpGaze(float newTimeForSelection)
     {
-        this.timeForSelection = timeForSelection;
+        timeForSelection = newTimeForSelection;
+        StartGazeSelection();
     }
+
     public void StartGazeSelection()
     {
         gazeBarCanvas.SetActive(true);
         runTimer = true;
-        timeProggres = 0;
+        timeCounter = 0;
     }
 
     public void CancelGazeSelection()
     {
         gazeBarCanvas.SetActive(false);
         runTimer = false;
-        timeProggres = 0;
         timeCounter = 0;
+        fillIndicator.fillAmount = 0;
     }
 
-    private void AddValue(float val) 
+    private void UpdateGazeProgress()
     {
-        timeCounter = val;
+        fillIndicator.fillAmount = timeCounter / timeForSelection;
+
         if (timeCounter >= timeForSelection)
         {
-            timeCounter = 0;
-            runTimer = false;
-            OnGazeSelection?.Invoke();
+            OnGazeSelection?.Invoke(); // Invocar el evento de selección
+            CancelGazeSelection();
         }
-
-        fillIndicator.fillAmount = Normalise();
-    }
-    private float Normalise() 
-    {
-        return (float)timeCounter / timeForSelection;
     }
 }

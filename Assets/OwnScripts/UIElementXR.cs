@@ -7,11 +7,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class UIElementXR : MonoBehaviour
 {
-    
     public UnityEvent OnXRPointerEnter;
     public UnityEvent OnXRPointerExit;
     private Camera XRCamera;
-    // Start is called before the first frame update
+
     void Start()
     {
         XRCamera = CameraPointerManager.Instance.gameObject.GetComponent<Camera>();
@@ -25,7 +24,7 @@ public class UIElementXR : MonoBehaviour
 
     public void OnPointerEnterXR()
     {
-        GazeManager.Instance.SetUpGaze(1.5f);
+        GazeManager.Instance.SetUpGaze(1.5f); // Ajustar el tiempo de la barra de selección
         OnXRPointerEnter?.Invoke();
         PointerEventData pointerEvent = PlacePointer();
         ExecuteEvents.Execute(this.gameObject, pointerEvent, ExecuteEvents.pointerDownHandler);
@@ -33,7 +32,7 @@ public class UIElementXR : MonoBehaviour
 
     public void OnPointerExitXR()
     {
-        GazeManager.Instance.SetUpGaze(2.5f);
+        GazeManager.Instance.CancelGazeSelection(); // Cancelar el gaze si se sale del objeto
         OnXRPointerExit?.Invoke();
         PointerEventData pointerEvent = PlacePointer();
         ExecuteEvents.Execute(this.gameObject, pointerEvent, ExecuteEvents.pointerUpHandler);
@@ -45,8 +44,5 @@ public class UIElementXR : MonoBehaviour
         var pointer = new PointerEventData(EventSystem.current);
         pointer.position = new Vector2(screenPos.x, screenPos.y);
         return pointer;
-
     }
-
-
 }

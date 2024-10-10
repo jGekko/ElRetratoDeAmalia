@@ -12,7 +12,7 @@ public class TeleportPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        //transform.GetChild(0).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,7 +40,11 @@ public class TeleportPoint : MonoBehaviour
     private void ExecuteTeleportation()
     {
         GameObject player = TelportManager.Instance.Player;
-        player.transform.position = transform.position;
+        //Convervar la pos. Y de la camara
+        Vector3 targetPosition = new Vector3(transform.position.x, 2.823f,transform.position.z);
+        player.transform.position = targetPosition;
+
+        //ajustar la rotacion
         Camera camera = player.GetComponentInChildren<Camera>();
         float roty = transform.rotation.eulerAngles.y - camera.transform.localEulerAngles.y;
         player.transform.rotation = Quaternion.Euler(0, roty, 0);
