@@ -41,7 +41,7 @@ public class TeleportPoint : MonoBehaviour
     {
         GameObject player = TelportManager.Instance.Player;
         //Convervar la pos. Y de la camara
-        Vector3 targetPosition = new Vector3(transform.position.x, 2.823f,transform.position.z);
+        Vector3 targetPosition = new Vector3(transform.position.x, 2.633f,transform.position.z);
         player.transform.position = targetPosition;
 
         //ajustar la rotacion
