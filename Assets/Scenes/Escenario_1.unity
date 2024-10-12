@@ -6405,6 +6405,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  escena1: 1
+  extraHeight: 0
 --- !u!1 &1351606607
 GameObject:
   m_ObjectHideFlags: 0
@@ -6672,6 +6674,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  escena1: 1
+  extraHeight: 0
 --- !u!1 &1378828233 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6a65e0e3c927b4faa033aed51a5948, type: 3}
@@ -9391,6 +9395,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  escena1: 1
+  extraHeight: 0
 --- !u!4 &1777764831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8d49c1e4d5c36c343aa8d81cab3e3a13, type: 3}

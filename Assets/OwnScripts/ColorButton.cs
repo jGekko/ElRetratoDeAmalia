@@ -17,6 +17,7 @@ public class ColorButton : MonoBehaviour
         if (interactionButton != null)
         {
             interactionButton.onClick.Invoke();
+            gameObject.tag = "Untagged"; // Cambiar el tag al default
         }
     }
 }

@@ -8,11 +8,15 @@ public class TurnOnPopup : MonoBehaviour
     public bool playSoundOnClick = false; // Booleano para activar o desactivar el sonido desde el Inspector
     public AudioSource audioSource;       // Referencia al componente AudioSource para reproducir el sonido
     public bool disableInteractableTag = false; // Checkbox para desactivar el tag interactable
+    public bool scene2 = false;           // Variable para determinar si es la escena 2
 
     public void OnPointerClickXR()
     {
         // Activar el popup
-        popup.gameObject.SetActive(true);
+        if (popup != null)
+        {
+            popup.gameObject.SetActive(true);
+        }
 
         // Verificar si el sonido está habilitado y si hay un audioSource asignado
         if (playSoundOnClick && audioSource != null)
@@ -24,6 +28,12 @@ public class TurnOnPopup : MonoBehaviour
         if (disableInteractableTag)
         {
             gameObject.tag = "Untagged"; // Cambiar el tag a default
+        }
+
+        // Incrementar el contador si es la escena 2
+        if (scene2)
+        {
+            GlobalVariables.scene2Counter++;
         }
     }
 }

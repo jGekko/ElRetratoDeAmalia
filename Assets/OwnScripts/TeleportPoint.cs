@@ -8,6 +8,8 @@ public class TeleportPoint : MonoBehaviour
     public UnityEvent OnTeleportEnter;
     public UnityEvent OnTeleport;
     public UnityEvent OnTeleportExit;
+    public bool escena1 = false; // Variable para determinar si es escena1
+    public float extraHeight = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -40,11 +42,12 @@ public class TeleportPoint : MonoBehaviour
     private void ExecuteTeleportation()
     {
         GameObject player = TelportManager.Instance.Player;
-        //Convervar la pos. Y de la camara
-        Vector3 targetPosition = new Vector3(transform.position.x, 2.633f,transform.position.z);
+        // Conservar la pos. Y de la cámara
+        float targetY = escena1 ? 2.633f : transform.position.y + extraHeight;
+        Vector3 targetPosition = new Vector3(transform.position.x, targetY, transform.position.z);
         player.transform.position = targetPosition;
 
-        //ajustar la rotacion
+        // Ajustar la rotación
         Camera camera = player.GetComponentInChildren<Camera>();
         float roty = transform.rotation.eulerAngles.y - camera.transform.localEulerAngles.y;
         player.transform.rotation = Quaternion.Euler(0, roty, 0);
