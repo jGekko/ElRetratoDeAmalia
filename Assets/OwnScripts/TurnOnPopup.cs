@@ -10,6 +10,8 @@ public class TurnOnPopup : MonoBehaviour
     public bool disableInteractableTag = false; // Checkbox para desactivar el tag interactable
     public bool scene2 = false;           // Variable para determinar si es la escena 2
 
+    private static AudioSource currentlyPlayingAudioSource; // Variable estática para rastrear el AudioSource que está sonando
+
     public void OnPointerClickXR()
     {
         // Activar el popup
@@ -21,7 +23,15 @@ public class TurnOnPopup : MonoBehaviour
         // Verificar si el sonido está habilitado y si hay un audioSource asignado
         if (playSoundOnClick && audioSource != null)
         {
-            audioSource.Play(); // Reproducir el sonido
+            // Detener el audio que está sonando actualmente si existe
+            if (currentlyPlayingAudioSource != null && currentlyPlayingAudioSource.isPlaying)
+            {
+                currentlyPlayingAudioSource.Stop();
+            }
+
+            // Reproducir el nuevo sonido y actualizar la referencia del AudioSource actual
+            audioSource.Play();
+            currentlyPlayingAudioSource = audioSource;
         }
 
         // Desactivar el tag interactable si el checkbox está activado
