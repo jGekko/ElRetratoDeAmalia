@@ -1613,6 +1613,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7567821575566697300, guid: 59f719ceb8d73044f959b9177a0b2e06, type: 3}
+      propertyPath: m_Name
+      value: Cucuta
+      objectReference: {fileID: 0}
+    - target: {fileID: -1959074653749387424, guid: 59f719ceb8d73044f959b9177a0b2e06, type: 3}
+      propertyPath: m_Name
+      value: Malaga
+      objectReference: {fileID: 0}
+    - target: {fileID: 792018800986737730, guid: 59f719ceb8d73044f959b9177a0b2e06, type: 3}
+      propertyPath: m_Name
+      value: PaloNegro
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 59f719ceb8d73044f959b9177a0b2e06, type: 3}
       propertyPath: m_Name
       value: Escenario_3_siete_REFERENCIA

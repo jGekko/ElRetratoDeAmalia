@@ -2594,6 +2594,7 @@ MonoBehaviour:
   playSoundOnClick: 1
   audioSource: {fileID: 1782933121}
   disableInteractableTag: 1
+  scene2: 0
 --- !u!65 &412979919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6571,6 +6572,14 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 12.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 100ebbf8d1465994c886b64535e34866, type: 3}
     - target: {fileID: 6892130930862096955, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6582,7 +6591,7 @@ PrefabInstance:
     - target: {fileID: 7607950337450947008, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa83022089d1a8743996b274393b8e19, type: 3}
+      objectReference: {fileID: 21300000, guid: 30761169f819a98489dd098ab6d43ec5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2347415838469616822, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
@@ -7147,6 +7156,14 @@ PrefabInstance:
       value: 10.54
       objectReference: {fileID: 0}
     - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 100ebbf8d1465994c886b64535e34866, type: 3}
+    - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
@@ -7173,7 +7190,7 @@ PrefabInstance:
     - target: {fileID: 7607950337450947008, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa83022089d1a8743996b274393b8e19, type: 3}
+      objectReference: {fileID: 21300000, guid: 30761169f819a98489dd098ab6d43ec5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2347415838469616822, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
@@ -10196,6 +10213,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 51.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628870868954726885, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 100ebbf8d1465994c886b64535e34866, type: 3}
     - target: {fileID: 6892130930862096955, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10207,7 +10232,7 @@ PrefabInstance:
     - target: {fileID: 7607950337450947008, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa83022089d1a8743996b274393b8e19, type: 3}
+      objectReference: {fileID: 21300000, guid: 30761169f819a98489dd098ab6d43ec5, type: 3}
     - target: {fileID: 8555736526517536382, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_IsActive
       value: 1
