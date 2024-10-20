@@ -9,11 +9,19 @@ public class TurnOnPopup : MonoBehaviour
     public AudioSource audioSource;       // Referencia al componente AudioSource para reproducir el sonido
     public bool disableInteractableTag = false; // Checkbox para desactivar el tag interactable
     public bool scene2 = false;           // Variable para determinar si es la escena 2
+    public bool isFinalAudio = false;     // Booleano para determinar si este es el audio final
+    public ExitActivator exitActivator;   // Referencia al script ExitActivator
 
     private static AudioSource currentlyPlayingAudioSource; // Variable estática para rastrear el AudioSource que está sonando
 
     public void OnPointerClickXR()
     {
+        // Si es el audio final, establecer activateExit en true
+            if (isFinalAudio && exitActivator != null)
+            {
+                exitActivator.activateExit = true;
+            }
+            
         // Activar el popup
         if (popup != null)
         {

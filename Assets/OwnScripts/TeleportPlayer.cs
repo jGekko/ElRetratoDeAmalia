@@ -22,7 +22,7 @@ public class TeleportPlayer : MonoBehaviour
         if (player != null)
         {
             player.transform.position = teleportLocation;
-            player.transform.rotation = teleportRotation;
+            playerCam.transform.rotation = teleportRotation;
         }
     }
 }

@@ -19,4 +19,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Escenario_3"); // Reemplaza "Scene3" con el nombre de tu tercera escena
     }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Main_menu");
+    }
 }     
