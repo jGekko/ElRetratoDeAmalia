@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenario_3.unity
     guid: f3bb321cae9d3d0488dbc36a7dfcfd6b
+  - enabled: 1
+    path: Assets/Scenes/Tumba_1.unity
+    guid: 98f365a01893b844e9429ab0770a604d
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 13c5a8636d2da654ab882d5002f31103, type: 2}
