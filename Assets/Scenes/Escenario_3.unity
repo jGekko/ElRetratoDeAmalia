@@ -2828,7 +2828,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7995a3b18d99b1a459a31eb0689942bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: db61cd01000906640aac7a9ee03f1b1d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -5182,7 +5182,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7162025868337896590, guid: b43d0e127a7008641b20eccdbeaf7012, type: 3}
   m_PrefabInstance: {fileID: 2106971477}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1316939576
+--- !u!114 &1316939579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5191,47 +5191,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 1316939574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4ce3c9447e77c4ab53e8aa743f1214, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c467ac14a0f3d74f83e3c00d8376b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportLocation: {x: 0.0089, y: -0.4785, z: 0}
-  teleportRotation: {x: 0, y: 180, z: 0, w: 0}
-  player: {fileID: 907292807}
-  playerCam: {fileID: 959308587}
---- !u!114 &1316939580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316939574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 301efb5b5ec83dd4291e6a2cb4c8d613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popup: {fileID: 0}
-  playSoundOnClick: 1
-  audioSource: {fileID: 1598909051}
-  disableInteractableTag: 0
-  scene2: 0
-  isFinalAudio: 0
-  exitActivator: {fileID: 0}
---- !u!114 &1316939581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316939574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f7779074ba4c44e8e24e8db3240301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 1430182407}
-  playOnAwake: 0
-  stopOtherAudios: 1
+  OnTeleportEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1947180575}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnTeleport:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1947180575}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnTeleportExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1947180575}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  escena1: 0
+  extraHeight: 0.08
 --- !u!1001 &1325788185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6546,7 +6555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4ce3c9447e77c4ab53e8aa743f1214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportLocation: {x: 0.07, y: -0.502, z: 0}
+  teleportLocation: {x: 0.03, y: -0.502, z: 0}
   teleportRotation: {x: 0, y: -200, z: 0, w: 0}
   player: {fileID: 907292807}
   playerCam: {fileID: 959308587}
@@ -7524,6 +7533,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884229499}
   m_CullTransparentMesh: 1
+--- !u!1 &1947180575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3442564455458864423, guid: b43d0e127a7008641b20eccdbeaf7012, type: 3}
+  m_PrefabInstance: {fileID: 2106971477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1965562430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7542,7 +7556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3157410637688892480, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_Name
-      value: Pop_Tp AbajoPalonegro (1)
+      value: Pop_Tp AbajoCucuta
       objectReference: {fileID: 0}
     - target: {fileID: 3157410637688892480, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       propertyPath: m_IsActive
@@ -7698,6 +7712,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3157410637688892480, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1965562433}
+    - targetCorrespondingSourceObject: {fileID: 3157410637688892480, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1965562437}
+    - targetCorrespondingSourceObject: {fileID: 3157410637688892480, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1965562436}
   m_SourcePrefab: {fileID: 100100000, guid: 03c759a1142413d42a9461dcc04dca95, type: 3}
 --- !u!1 &1965562431 stripped
 GameObject:
@@ -7757,8 +7777,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4ce3c9447e77c4ab53e8aa743f1214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportLocation: {x: 0.07, y: -0.502, z: 0}
+  teleportLocation: {x: 0.03, y: -0.502, z: 0}
   teleportRotation: {x: 0, y: -200, z: 0, w: 0}
+  player: {fileID: 907292807}
+  playerCam: {fileID: 959308587}
+--- !u!114 &1965562436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965562431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301efb5b5ec83dd4291e6a2cb4c8d613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popup: {fileID: 0}
+  playSoundOnClick: 1
+  audioSource: {fileID: 1598909051}
+  disableInteractableTag: 0
+  scene2: 0
+  isFinalAudio: 0
+  exitActivator: {fileID: 1684336548}
+--- !u!114 &1965562437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965562431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4ce3c9447e77c4ab53e8aa743f1214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportLocation: {x: 0.0089, y: -0.4785, z: 0}
+  teleportRotation: {x: 0, y: 180, z: 0, w: 0}
   player: {fileID: 907292807}
   playerCam: {fileID: 959308587}
 --- !u!1001 &2057619775
@@ -7895,7 +7950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4ce3c9447e77c4ab53e8aa743f1214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportLocation: {x: 0.0081, y: -0.4969, z: 0}
+  teleportLocation: {x: 0.03, y: -0.4969, z: 0}
   teleportRotation: {x: 0.2, y: 140.675, z: 0, w: 0}
   player: {fileID: 907292807}
   playerCam: {fileID: 959308587}
@@ -8037,13 +8092,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6897416843632383775, guid: b43d0e127a7008641b20eccdbeaf7012, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1316939576}
-    - targetCorrespondingSourceObject: {fileID: 6897416843632383775, guid: b43d0e127a7008641b20eccdbeaf7012, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1316939580}
-    - targetCorrespondingSourceObject: {fileID: 6897416843632383775, guid: b43d0e127a7008641b20eccdbeaf7012, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1316939581}
+      addedObject: {fileID: 1316939579}
   m_SourcePrefab: {fileID: 100100000, guid: b43d0e127a7008641b20eccdbeaf7012, type: 3}
 --- !u!1 &2122849319
 GameObject:
