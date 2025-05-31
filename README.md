@@ -6,8 +6,6 @@
 - Escenario 2: Campo de batalla tras la Batalla de Palonegro.  
 - Escenario 3: Pueblo con fotografías y lugares simbólicos, incluyendo su tumba.
 
->  Enfoque educativo y patrimonial mediante narrativa inmersiva.
-
 ## Más información
 
 Sitio oficial del proyecto: [https://amalia.modoc.com.co/](https://amalia.modoc.com.co/)
