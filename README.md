@@ -10,8 +10,8 @@
 
 ## Capturas
 
-![Escenario 1](./imagenes/escenario1.png)
-![Escenario 2](./imagenes/escenario2.png)
+![Escenario 1](./imagenes/snapAmalia1.png)
+![Escenario 2](./imagenes/snapAmalia2.png)
 
 
 
