@@ -8,13 +8,11 @@
 
 >  Enfoque educativo y patrimonial mediante narrativa inmersiva.
 
+## Más información
+
+Sitio oficial del proyecto: [https://amalia.modoc.com.co/](https://amalia.modoc.com.co/)
+
 ## Capturas
 
 ![Escenario 1](./imagenes/snapAmalia1.png)
 ![Escenario 2](./imagenes/snapAmalia2.png)
-
-
-
-## Más información
-
-Sitio oficial del proyecto: [https://amalia.modoc.com.co/](https://amalia.modoc.com.co/)
