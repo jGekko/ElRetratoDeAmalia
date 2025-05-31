@@ -12,5 +12,5 @@ Sitio oficial del proyecto: [https://amalia.modoc.com.co/](https://amalia.modoc.
 
 ## Capturas
 
-![Escenario 1](./imagenes/snapAmalia1.png)
-![Escenario 2](./imagenes/snapAmalia2.png)
+![Escenario 1](./media/snapAmalia1.png)
+![Escenario 2](./media/snapAmalia2.png)
